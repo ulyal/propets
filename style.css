@@ -4,6 +4,7 @@
 	--color-text-inverted: white;
 	--color-selected: hsl(44, 100%, 77%);
 	--color-importent: hsl(5, 100%, 69%);
+	--indent: 8rem;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
 
 section {
 	width: 100%;
-	padding: .5rem 8rem;
+	padding: .5rem var(--indent);
 }
 
 .inverted {
@@ -57,6 +58,7 @@ h1 {
 	font-size: 2.5rem;
 	font-weight: normal;
 	margin: 2.5em 0 1.5em 0;
+	letter-spacing: .01em;
 }
 
 h1 em {
@@ -64,6 +66,57 @@ h1 em {
 	color: var(--brand-color);
 }
 
+nav > a {
+	--menu-width: calc(var(--indent) + 9em);
+	--menu-padding: .8em;
+	--menu-line-height: 1em;
+	--menu-radius: calc((var(--menu-padding) * 2 + var(--menu-line-height)) / 2);
+	display: block;
+	width: var(--menu-width);
+	background: var(--brand-color);
+	text-decoration: none;
+	color: var(--color-text-inverted);
+	padding: var(--menu-padding) var(--menu-padding) var(--menu-padding) var(--indent);
+	font-size: x-large;
+	border-top-right-radius: var(--menu-radius);
+	border-bottom-right-radius: var(--menu-radius);
+	line-height: var(--menu-line-height);
+	margin-left: calc(0em - var(--indent));
+}
+
+.emphased {
+	width: calc(var(--menu-width) + 2 * var(--menu-radius));
+	background: var(--color-selected);
+	color: var(--color-text);
+}
+
+nav img {
+	display: block;
+	float: right;
+	--padding-icon: .3em;
+	width: calc(2 * (var(--menu-padding) - var(--padding-icon)) + var(--menu-line-height));
+	margin: calc( var(--padding-icon) - var(--menu-padding));
+}
+#icon-lost {
+	transform: scale(1.25);
+	transform-origin: top left;
+}
+
+#lost:before {
+	content: "I lost my pet!";
+}
+
+#lost:hover:before {
+	content: "Click to find!";
+}
+
+#found:before {
+	content: "I found a pet!";
+}
+
+#found:hover:before {
+	content: "What to do?";
+}
 
 
 
