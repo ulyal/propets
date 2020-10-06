@@ -4,7 +4,7 @@
 	--color-text-inverted: white;
 	--color-selected: hsl(44, 100%, 77%);
 	--color-importent: hsl(5, 100%, 69%);
-	--indent: calc((100vw - 70rem)/2);
+	--indent: calc((100vw - 60rem) / 2);
 	--menu-width: calc(var(--indent) + 9em);
 	--menu-padding: .8em;
 	--menu-line-height: 1em;
@@ -58,6 +58,15 @@ section {
 	width: 6em;
 }
 
+.white-panel {
+	display: flex;
+	justify-content: space-between;
+}
+
+.left-block {
+	order: 0;
+}
+
 h1 {
 	font-size: 2.5rem;
 	font-weight: normal;
@@ -84,6 +93,23 @@ nav > a {
 	margin-left: calc(0px - var(--indent));
 }
 
+.join {
+	width: calc(var(--indent) + 12rem);
+	border-top-right-radius: calc(var(--menu-radius) + var(--menu-line-height) * .5);
+	border-bottom-right-radius: calc(var(--menu-radius) + var(--menu-line-height) * .5);
+	font-size: small;
+	background: var(--color-text-inverted);
+	color: var(--color-text);
+	border: 1px solid var(--brand-color);
+}
+
+.join em {
+	font-style: normal;
+	text-decoration: underline;
+	text-transform: uppercase;
+	color: var(--brand-color);
+}
+
 .emphased {
 	width: calc(var(--menu-width) + 2 * var(--menu-radius));
 	background: var(--color-selected);
@@ -95,8 +121,18 @@ nav img {
 	float: right;
 	--padding-icon: .3em;
 	width: calc(2 * (var(--menu-padding) - var(--padding-icon)) + var(--menu-line-height));
-	margin: calc( var(--padding-icon) - var(--menu-padding));
+	margin: calc(var(--padding-icon) - var(--menu-padding));
 }
+
+#dog {
+	display: flex;
+	order: 1;
+	float: right;
+	width: 25rem;
+	margin: 0;
+
+}
+
 #icon-lost {
 	transform: scale(1.25);
 	transform-origin: top left;
@@ -120,10 +156,7 @@ nav img {
 #found:hover:before {
 	content: "What to do?";
 }
-#join {
-	text-transform: uppercase;
-	color: var(--brand-color);
-}
+
 .middle-panel {
 	--padding-middle-panel: calc(var(--indent) * 2);
 	display: flex;
