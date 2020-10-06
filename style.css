@@ -4,7 +4,11 @@
 	--color-text-inverted: white;
 	--color-selected: hsl(44, 100%, 77%);
 	--color-importent: hsl(5, 100%, 69%);
-	--indent: 8rem;
+	--indent: calc((100vw - 70rem)/2);
+	--menu-width: calc(var(--indent) + 9em);
+	--menu-padding: .8em;
+	--menu-line-height: 1em;
+	--menu-radius: calc((var(--menu-padding) * 2 + var(--menu-line-height)) / 2);
 }
 
 * {
@@ -67,10 +71,6 @@ h1 em {
 }
 
 nav > a {
-	--menu-width: calc(var(--indent) + 9em);
-	--menu-padding: .8em;
-	--menu-line-height: 1em;
-	--menu-radius: calc((var(--menu-padding) * 2 + var(--menu-line-height)) / 2);
 	display: block;
 	width: var(--menu-width);
 	background: var(--brand-color);
@@ -81,7 +81,7 @@ nav > a {
 	border-top-right-radius: var(--menu-radius);
 	border-bottom-right-radius: var(--menu-radius);
 	line-height: var(--menu-line-height);
-	margin-left: calc(0em - var(--indent));
+	margin-left: calc(0px - var(--indent));
 }
 
 .emphased {
@@ -104,10 +104,13 @@ nav img {
 
 #lost:before {
 	content: "I lost my pet!";
+	-webkit-transition: background-color .3s;
 }
 
 #lost:hover:before {
 	content: "Click to find!";
+	background-color: var(--color-selected);
+	opacity: .6;
 }
 
 #found:before {
@@ -116,6 +119,19 @@ nav img {
 
 #found:hover:before {
 	content: "What to do?";
+}
+#join {
+	text-transform: uppercase;
+	color: var(--brand-color);
+}
+.middle-panel {
+	--padding-middle-panel: calc(var(--indent) * 2);
+	display: flex;
+	height: calc(6 * var(--menu-radius));
+	align-items: center;
+	font-size: x-large;
+	padding-left: var(--padding-middle-panel);
+	padding-right: var(--padding-middle-panel);
 }
 
 
