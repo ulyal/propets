@@ -21,7 +21,7 @@ body {
 	font-family: sans-serif;
 }
 
-section {
+.section {
 	width: 100%;
 	padding: .5rem var(--indent);
 }
@@ -182,7 +182,7 @@ nav img {
 }
 
 .white-panel-list p {
-	font-size: larger;
+	font-size: 1.5em;
 }
 
 .white-panel-list > img {
@@ -197,6 +197,8 @@ li {
 	color: var(--color-text);
 	margin: 0em;
 	list-style-type: none;
+	font-size: 120%;
+	line-height: 1.5em;
 }
 
 li:before {
@@ -204,7 +206,6 @@ li:before {
 	content: "•";
 	padding-right: .5em;
 	font-size: 200%;
-
 }
 
 .red-panel {
@@ -273,14 +274,15 @@ li:before {
 	color: var(--color-text-inverted);
 
 }
-table{
-border-spacing: 1em 0;
+
+table {
+	border-spacing: 1em 0;
 	padding: 0;
 	line-height: 0;
 	font-size: 1.1em;
 }
 
-table img{
+table img {
 	size: .6em;
 }
 
