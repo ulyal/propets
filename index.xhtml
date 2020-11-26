@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width"/>
 <link rel="stylesheet" href="style.css"/>
 <title>ProPETS</title>
+
 </head>
 <body>
-
+<main>
 <div class="section inverted top-panel">
-    <a class="top-button" href='#sing-in-up'>Sing in</a>
+    <a class="top-button js-open-modal" data-modal="authorization" href='#'>Sing in</a>
     <img class="small-logo" alt="logo" src="img/logo.svg"/>
 </div>
 <div class="section white-panel">
@@ -17,10 +18,10 @@
         <em>pawfessional</em><br/>
         community</h1>
         <nav>
-            <a id="lost" href="" class="emphased"><img id="icon-lost" alt="icon-lost" src="img/icon-lost.svg"/></a>
-            <a id="found" href=""></a>
+            <a id="lost" href="" class="emphased js-open-modal" data-modal="authorization"><img id="icon-lost" alt="icon-lost" src="img/icon-lost.svg"/></a>
+            <a id="found" href="" class="js-open-modal" data-modal="authorization"></a>
         </nav>
-        <p><a class="join" href="'#sing-in-up'">I’m okay, just want to <em>join</em> the pawsome community!</a></p>
+        <p><a class="join js-open-modal" data-modal="authorization" href="">I’m okay, just want to <em>join</em> the pawsome community!</a></p>
     </div>
     <img id="dog" src="img/dog.png"/>
 </div>
@@ -32,7 +33,7 @@
 </div>
 
 <div class="section white-panel-list">
-    <img src="img/pets.png"/>
+    <div><img src="img/pets.png"/></div>
     <div class="block-list">
         <p>Here is collected everything that your pet needs:</p>
         <ul>
@@ -75,6 +76,21 @@
     </tr>
     </table>
 </div>
+</main>
+<div class="modal js-modal" data-modal="authorization">
+    <img src="img/logo-big-brand.svg" alt="logo"/>
+    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09
+        9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81
+        9.112-9.192 9.18 9.1z"/>
+    </svg>
+    <p class="welcome"><strong>Welcome!</strong> Please sign in / sign up to continue or</p>
+    <div>
+    <a class="facebook-button" href="">Enter with F</a>
+    </div>
+</div>
 
+<div class="overlay js-modal-overlay"></div>
+<script src="modal.js"></script>
 </body>
 </html>

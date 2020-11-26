@@ -5,6 +5,7 @@
 	--color-selected: hsl(44, 100%, 77%);
 	--color-importent: hsl(5, 100%, 69%);
 	--color-facebook: #4560A6;
+	--color-grey: hsla(0, 0%, 73%, 1);
 	--indent: calc((100vw - 65rem) / 2);
 	--menu-width: calc(var(--indent) + 9em);
 	--menu-padding: 1em;
@@ -128,7 +129,6 @@ nav img {
 	float: right;
 	width: 25rem;
 	margin: 0;
-
 }
 
 #icon-lost {
@@ -187,6 +187,7 @@ nav img {
 
 .white-panel-list > img {
 	order: 0;
+	hieght: 40%;
 }
 
 .block-list {
@@ -238,41 +239,20 @@ li:before {
 	margin-bottom: 0;
 }
 
-.modal {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background: var(--color-text-inverted);
-	z-index: 1050;
-	opacity: 0;
-	pointer-events: auto;
-	margin: 0;
-	padding: 0;
-
-	/*width: 50%;*/
-	/*height: 55%;*/
-	/*margin: auto;*/
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-	padding: .8em;
-	color: var(--brand-color);
-}
-
 .big-logo-brand {
 	width: 25%;
+	padding: 0;
 }
 
 .facebook-button {
+	order: 1;
 	border: 1px solid var(--color-facebook);
 	border-radius: 1em;
 	line-height: 1em;
 	font-size: smaller;
 	background: var(--color-facebook);
 	text-decoration: none;
-
 	color: var(--color-text-inverted);
-
 }
 
 table {
@@ -286,6 +266,60 @@ table img {
 	size: .6em;
 }
 
-body {
-	/*-webkit-filter: blur(5px);*/
+.overlay {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 60;
+	transition: .3s all;
 }
+
+.bluer {
+	filter: blur(2em);
+}
+
+.modal {
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	max-width: 45em;
+	max-height: 25em;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 70;
+	box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+	border-radius: 3px;
+	padding: 1em;
+	background-color: var(--color-text-inverted);
+	transition: 0.3s all;
+	color: var(--color-grey);
+}
+
+.modal.active,
+.overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal__cross {
+	width: .8em;
+	height: .8em;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	fill: var(--color-grey);
+	cursor: pointer;
+}
+
+.welcome {
+	color: var(--brand-color);
+}
+
