@@ -5,7 +5,7 @@
 	--color-selected: hsl(44, 100%, 77%);
 	--color-importent: hsl(5, 100%, 69%);
 	--color-facebook: #4560A6;
-	--color-grey: hsla(0, 0%, 73%, 1);
+	--color-grey: hsl(0, 2.9%, 72.5%);
 	--indent: calc((100vw - 65rem) / 2);
 	--menu-width: calc(var(--indent) + 9em);
 	--menu-padding: 1em;
@@ -275,7 +275,7 @@ table img {
 	width: 100%;
 	height: 100%;
 	max-width: 45em;
-	max-height: 25em;
+	max-height: 30em;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -285,12 +285,11 @@ table img {
 	border-radius: 3px;
 	padding: 1em;
 	background-color: var(--color-text-inverted);
-	transition: 0.3s all;
+	transition: 0.2s all;
 	color: var(--color-grey);
 }
 
-.modal.active,
-.overlay.active {
+.modal.active {
 	opacity: 1;
 	visibility: visible;
 }
@@ -317,29 +316,48 @@ table img {
 
 .facebook-button {
 	border: 1px solid var(--color-facebook);
-	border-radius: .5em;
-	line-height: 1em;
-	font-size: smaller;
+	border-radius: 1.5em;
+	line-height: 2em;
+	font-size: medium;
 	background: var(--color-facebook);
 	text-decoration: none;
 	color: var(--color-text-inverted);
-	position: fixed;
+	width: 18em;
 	float: right;
-	z-index: 70;
+	z-index: 80;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.facebook-logo {
+	width: 6em;
+}
+
+.facebook-line {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .button-authorization {
 	background-color: var(--brand-color);
 	color: var(--color-text-inverted);
-	border: solid;
-	/*border-spacing: 5em;*/
+	border: none;
 	display: block;
 	text-decoration: none;
 	width: 50%;
-	max-width: 22.5em;
 	height: 2.5em;
 	line-height: 2em;
-	/*flex: 50%;*/
+}
+
+.button-sing-in-light {
+	opacity: .4;
+}
+
+.button-sing-in-light:hover {
+	opacity: 1;
 }
 
 .authorization {
@@ -350,4 +368,50 @@ table img {
 	/*flex-direction: column;*/
 	flex-wrap: wrap;
 	width: 100%;
+}
+
+input {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: .5mm solid var(--brand-color);
+	width: 16em;
+}
+
+.authorization-table{
+	padding-top: 2em;
+}
+
+.authorization-table tr{
+	height: 2em;
+}
+.authorization-table td:nth-child(3){
+	font-size: .7em;
+	overflow-wrap: anywhere;
+	color: var(--color-grey);
+}
+.authorization-table td:first-child{
+	float: right;
+	font-size: smaller;
+	color: var(--color-text);
+	line-height: 1em;
+}
+.modal-footer{
+	border-top: 1mm solid var(--color-grey);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.button{
+	border-radius: 1em;
+	line-height: 1em;
+	text-decoration: none;
+	border: solid var(--brand-color);
+}
+#cancel-button{
+
+}
+#submit-button{
+	background-color: var(--brand-color);
+	color: var(--color-text-inverted);
 }
