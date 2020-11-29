@@ -145,14 +145,17 @@ nav img {
 	content: "Click to find!";
 	background-color: var(--color-selected);
 	opacity: .6;
+	transition: .5s all;
 }
 
 #found:before {
 	content: "I found a pet!";
+	-webkit-transition: background-color .3s;
 }
 
 #found:hover:before {
 	content: "What to do?";
+	transition: .5s all;
 }
 
 .middle-panel {
@@ -239,22 +242,6 @@ li:before {
 	margin-bottom: 0;
 }
 
-.big-logo-brand {
-	width: 25%;
-	padding: 0;
-}
-
-.facebook-button {
-	order: 1;
-	border: 1px solid var(--color-facebook);
-	border-radius: 1em;
-	line-height: 1em;
-	font-size: smaller;
-	background: var(--color-facebook);
-	text-decoration: none;
-	color: var(--color-text-inverted);
-}
-
 table {
 	border-spacing: 1em 0;
 	padding: 0;
@@ -275,15 +262,14 @@ table img {
 	width: 100%;
 	height: 100%;
 	z-index: 60;
-	transition: .3s all;
 }
 
 .bluer {
 	filter: blur(2em);
+	transition: .1s all;
 }
 
 .modal {
-	display: flex;
 	opacity: 0;
 	visibility: hidden;
 	width: 100%;
@@ -323,3 +309,45 @@ table img {
 	color: var(--brand-color);
 }
 
+.big-logo-brand {
+	width: 25%;
+	padding: 0;
+
+}
+
+.facebook-button {
+	border: 1px solid var(--color-facebook);
+	border-radius: .5em;
+	line-height: 1em;
+	font-size: smaller;
+	background: var(--color-facebook);
+	text-decoration: none;
+	color: var(--color-text-inverted);
+	position: fixed;
+	float: right;
+	z-index: 70;
+}
+
+.button-authorization {
+	background-color: var(--brand-color);
+	color: var(--color-text-inverted);
+	border: solid;
+	/*border-spacing: 5em;*/
+	display: block;
+	text-decoration: none;
+	width: 50%;
+	max-width: 22.5em;
+	height: 2.5em;
+	line-height: 2em;
+	/*flex: 50%;*/
+}
+
+.authorization {
+	height: 2.5em;
+	text-align: center;
+	align-content: flex-start;
+	display: flex;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	width: 100%;
+}
