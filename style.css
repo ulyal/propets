@@ -33,10 +33,14 @@ body {
 }
 
 .top-panel {
-	height: 3.5rem;
+	height: 5rem;
 	display: flex;
 	align-items: center;
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.top-panel img {
+	width: 10em;
 }
 
 .top-button {
@@ -57,9 +61,9 @@ body {
 	border-color: var(--color-selected);
 }
 
-.small-logo {
-	width: 6em;
-}
+/*.small-logo {*/
+/*	width: 6em;*/
+/*}*/
 
 .white-panel {
 	display: flex;
@@ -182,6 +186,7 @@ nav img {
 	margin-top: 3rem;
 	display: flex;
 	color: var(--brand-color);
+	font-size: .9em;
 }
 
 .white-panel-list p {
@@ -236,8 +241,9 @@ li:before {
 	height: calc(8 * var(--menu-radius));
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: space-between;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-between;
 	font-size: small;
 	margin-bottom: 0;
 }
@@ -275,7 +281,7 @@ table img {
 	width: 100%;
 	height: 100%;
 	max-width: 45em;
-	max-height: 30em;
+	max-height: 27em;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -315,15 +321,12 @@ table img {
 }
 
 .facebook-button {
-	border: 1px solid var(--color-facebook);
-	border-radius: 1.5em;
-	line-height: 2em;
-	font-size: medium;
+	border: .6mm solid var(--color-facebook);
+	line-height: .5em;
+	font-size: .7em;
 	background: var(--color-facebook);
-	text-decoration: none;
 	color: var(--color-text-inverted);
-	width: 18em;
-	float: right;
+	width: 15em;
 	z-index: 80;
 	display: flex;
 	flex-direction: row;
@@ -331,7 +334,7 @@ table img {
 }
 
 .facebook-logo {
-	width: 6em;
+	width: 2.5em;
 }
 
 .facebook-line {
@@ -345,7 +348,9 @@ table img {
 	background-color: var(--brand-color);
 	color: var(--color-text-inverted);
 	border: none;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
 	width: 50%;
 	height: 2.5em;
@@ -360,12 +365,17 @@ table img {
 	opacity: 1;
 }
 
+
+.authorization-table.active:first-child {
+	display: none;
+}
+
+
 .authorization {
 	height: 2.5em;
 	text-align: center;
 	align-content: flex-start;
 	display: flex;
-	/*flex-direction: column;*/
 	flex-wrap: wrap;
 	width: 100%;
 }
@@ -378,40 +388,68 @@ input {
 	width: 16em;
 }
 
-.authorization-table{
-	padding-top: 2em;
+.authorization-table {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
-.authorization-table tr{
-	height: 2em;
+.authorization-table tr {
+	height: 1em;
 }
-.authorization-table td:nth-child(3){
+
+.authorization-table td:nth-child(3) {
 	font-size: .7em;
 	overflow-wrap: anywhere;
 	color: var(--color-grey);
 }
-.authorization-table td:first-child{
+
+.authorization-table td:first-child {
 	float: right;
 	font-size: smaller;
 	color: var(--color-text);
 	line-height: 1em;
 }
-.modal-footer{
-	border-top: 1mm solid var(--color-grey);
+
+.modal-footer {
+	border-top: .7mm solid var(--color-grey);
+	z-index: 80;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: .7em;
+	padding-top: .5em;
+}
+
+.button {
+	border-radius: 1.5em;
+	text-decoration: none;
+	border: .5mm solid var(--brand-color);
+	font-size: larger;
+
+}
+
+#cancel-button {
+	color: var(--brand-color);
+	width: 8em;
+	padding: 0 2.25em;
+	line-height: 2.5em;
+}
+
+#submit-button {
+	background-color: var(--brand-color);
+	color: var(--color-text-inverted);
+	width: 12em;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	line-height: .5em;
 }
-.button{
-	border-radius: 1em;
-	line-height: 1em;
-	text-decoration: none;
-	border: solid var(--brand-color);
-}
-#cancel-button{
 
+.footprint-button {
+	padding: 0 .5em;
 }
-#submit-button{
-	background-color: var(--brand-color);
-	color: var(--color-text-inverted);
+
+.submit-button-name {
+	padding-left: 2em;
 }

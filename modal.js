@@ -27,5 +27,11 @@ document.body.addEventListener('keyup', function (e) {
     ;
 }, false);
 
-
+//authorization-nav
+// const linkAuthorization = document.querySelector('js-authorization');
+//
+// linkAuthorization.addEventListener('click', function (event){
+//     event.preventDefault();
+//     document.querySelector('authorization-table').classList.add('active');
+// });
 

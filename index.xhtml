@@ -86,40 +86,42 @@
     </svg>
     <div class="facebook-line">
     <p class="welcome"><strong>Welcome!</strong> Please sign in / sign up to continue or</p>
-        <a class="facebook-button" href=""><img class="facebook-logo" src="img/facebook-logo.svg" alt="facebook-logo"/>Enter with Facebook</a>
+        <a class=" button facebook-button" href=""><img class="facebook-logo" src="img/facebook-logo.svg" alt="facebook-logo"/>Enter with Facebook</a>
     </div>
     <div class="authorization">
-    <a class="button-authorization" href="">Sing up</a><a class="button-authorization button-sing-in-light" href="">Sing in</a>
+        <a class="button-authorization" href=""><strong>Sing up</strong></a>
+        <a class="button-authorization button-sing-in-light js-authorization" href=""><strong>Sing in</strong></a>
     </div>
     <table class="authorization-table">
     <tr>
         <td><p>Name:</p></td>
-        <td><input type="text" name="name" size="17" placeholder="Helen Johnson"/></td>
+        <td><input type="text" name="name" size="17" placeholder="Helen Johnson" required/></td>
     </tr>
     <tr>
         <td><p>Email:</p></td>
-        <td><input type="text" name="email" size="17" placeholder="helenjohnson@gmail.com"/></td>
+        <td><input type="email" name="email" size="17" placeholder="helenjohnson@gmail.com" required/></td>
     </tr>
     <tr>
         <td><p>Password:</p></td>
-        <td><input type="text" name="password" size="17" placeholder="*****************"/></td>
+        <td><input type="password" name="password" size="17" placeholder="*****************" required/></td>
         <td><p class="password">Password must have at least 8 characters with at least one<br/> Capital letter,
             at least one lower case letter and at least one<br/>
             number or special character.</p></td>
     </tr>
     <tr>
         <td><p>Password:</p></td>
-        <td><input type="text" name="password" size="17" placeholder="*****************"/></td>
+        <td><input type="password" name="password" size="17" placeholder="*****************" required/></td>
         <td><p class="password">Please re-enter your password</p></td>
     </tr>
     </table>
+    <div class="modal-footer">
+        <p>By clicking “Submit”, you agree to us processing your<br/> information in accordance with these terms.</p>
+        <a id="cancel-button" class="button" href="" >Cancel</a>
+        <a id="submit-button" class="button" href=""><img class="footprint-button" src="img/footprint.png" alt="footprint"/><p class="submit-button-name">Submit</p></a>
+    </div>
    </div>
-<div class="modal-footer">
-    <p>By clicking “Submit”, you agree to us processing your<br/> information in accordance with these terms.</p>
-    <a id="cancel-button" class="button" href="" >Cancel</a>
-    <a id="submit-button" class="button" href=""><img src="img/footprint.png" alt="footprint"/>Submit</a>
-</div>
-<div class="overlay js-modal-overlay"></div>
+
+<!--<div class="overlay js-modal-overlay"></div>-->
 <script src="modal.js"></script>
 </body>
 </html>

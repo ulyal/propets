@@ -1,0 +1,7 @@
+.brand-vertical-section{
+	width: 15em;
+	background-color: var(--brand-color);
+	height: 100%;
+	color: var(--color-text-inverted);
+}
+
