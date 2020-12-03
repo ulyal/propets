@@ -365,12 +365,6 @@ table img {
 	opacity: 1;
 }
 
-
-.authorization-table.active:first-child {
-	display: none;
-}
-
-
 .authorization {
 	height: 2.5em;
 	text-align: center;
@@ -452,4 +446,12 @@ input {
 
 .submit-button-name {
 	padding-left: 2em;
+}
+
+.input-registration-hide {
+	visibility: visible;
+}
+
+.input-registration-hide.active {
+	visibility: hidden;
 }
