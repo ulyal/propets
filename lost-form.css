@@ -1,7 +1,31 @@
-.brand-vertical-section{
-	width: 15em;
-	background-color: var(--brand-color);
+.main-panel {
 	height: 100%;
-	color: var(--color-text-inverted);
+	width: 100%;
+	display: flex;
+	/*flex-flow: column;*/
+	/*position: relative;*/
+	flex-direction: row;
+	/*align-items: stretch;*/
 }
 
+.brand-vertical-section {
+	width: var(--brand-vertical-width);
+	background: var(--brand-color);
+	color: var(--color-text-inverted);
+	margin-left: calc(0px - var(--indent));
+	padding-left: var(--indent-content);
+	margin-right: calc(0px - var(--indent));
+	padding-right: var(--indent-content);
+}
+
+.white-vertical-section {
+	width: 100%;
+}
+
+table tr {
+	line-height: 2.2em;
+}
+table a{
+	text-decoration: none;
+	color: var(--color-text-inverted);
+}
