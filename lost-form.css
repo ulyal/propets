@@ -2,6 +2,7 @@
 	height: 100%;
 	width: 100%;
 	display: flex;
+	/*flex-wrap: wrap;*/
 	/*flex-flow: column;*/
 	/*position: relative;*/
 	flex-direction: row;
@@ -20,12 +21,35 @@
 
 .white-vertical-section {
 	width: 100%;
+	padding-left: calc(var(--brand-vertical-width) / 2);
+	padding-right: calc(var(--brand-vertical-width) / 2);
+	color: var(--brand-color);
 }
+.white-vertical-section > p {
+	padding-left: 3em;
+}
+.lost-form {
+	box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+	width: calc(var(--brand-vertical-width) * 2);
+	height: calc(var(--brand-vertical-width) * 2 - 5%);
+	margin-right: auto;
+	margin-left: auto;
+	font-size: small;
+}
+.white-vertical-section td:first-child{
+	float: right;
+	color: var(--color-text);
 
+}
+table > select{
+border: none;
+	background-color: var(--color-text-inverted);
+}
 table tr {
 	line-height: 2.2em;
 }
-table a{
+
+table a {
 	text-decoration: none;
 	color: var(--color-text-inverted);
 }
