@@ -1,6 +1,6 @@
 :root {
-	--ton-brand: 156;
-	--brand-color: hsl(var(--ton-brand), 20%, 50%);
+	--hue-brand: 156;
+	--brand-color: hsl(var(--hue-brand), 20%, 50%);
 	--color-text: hsl(0, 0%, 22%);
 	--color-text-inverted: white;
 	--color-selected: hsl(44, 100%, 77%);
@@ -61,7 +61,7 @@ body {
 	border: 1px solid var(--color-text-inverted);
 	border-radius: 1em;
 	line-height: 1em;
-	font-size: smaller;
+	font-size: 1em;
 	color: var(--color-text-inverted);
 	text-decoration: none;
 }
@@ -225,13 +225,15 @@ li:before {
 }
 
 .red-panel {
-	height: calc(4 * var(--menu-radius));
+	height: calc(5 * var(--menu-radius));
 	background-color: var(--color-importent);
 	color: var(--color-text-inverted);
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: space-between;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
 }
 
 .red-panel img {
@@ -240,14 +242,14 @@ li:before {
 
 .img-heart {
 	position: relative;
-	width: 100%;
+	/*width: 80%;*/
 }
 
 .img-heart > p {
 	position: absolute;
 	top: 1em;
 	left: 1.8em;
-	width: 100%;
+	width: 5%;
 }
 
 .center-horizontal > * {
@@ -256,7 +258,7 @@ li:before {
 }
 
 .coming {
-	font-size: 300%;
+	font-size: 340%;
 	margin: 0;
 }
 
@@ -270,7 +272,8 @@ li:before {
 	font-size: small;
 	margin-bottom: 0;
 }
-.big-logo{
+
+.big-logo {
 	width: 15em;
 }
 
@@ -317,7 +320,7 @@ table img {
 	border-radius: 3px;
 	padding: 1em;
 	background-color: var(--color-text-inverted);
-	transition: 0.2s all;
+	transition: 0.05s all;
 	color: var(--color-grey);
 }
 
@@ -343,7 +346,8 @@ table img {
 .big-logo-brand {
 	width: 25%;
 	padding: 0;
-filter: hue-rotate(var(--ton-brand)) saturate(100%) brightness(100%);
+	filter: invert(1) hue-rotate(-168deg) saturate(71%) brightness(60%);
+	filter: light(23%);
 }
 
 .facebook-button {
