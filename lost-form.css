@@ -25,31 +25,139 @@
 	padding-right: calc(var(--brand-vertical-width) / 2);
 	color: var(--brand-color);
 }
+
 .white-vertical-section > p {
 	padding-left: 3em;
 }
+
 .lost-form {
 	box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
-	width: calc(var(--brand-vertical-width) * 2);
+	width: calc(var(--brand-vertical-width) * 2 + 10em);
 	height: calc(var(--brand-vertical-width) * 2 - 5%);
 	margin-right: auto;
 	margin-left: auto;
 	font-size: small;
+	padding: 1em 1em 0 1em;
 }
-.white-vertical-section td:first-child{
+
+.white-vertical-section td:first-child {
 	float: right;
 	color: var(--color-text);
 
 }
-table > select{
-border: none;
+
+table > select {
+	border: none;
 	background-color: var(--color-text-inverted);
 }
+
 table tr {
-	line-height: 2.2em;
+	line-height: 1.5em;
+}
+
+table p {
+	line-height: 1.1em;
 }
 
 table a {
 	text-decoration: none;
 	color: var(--color-text-inverted);
+}
+
+.condition {
+	color: var(--brand-color);
+	font-size: smaller;
+	margin-top: 0;
+}
+
+.name-td-group {
+	margin-bottom: 0;
+	text-align: right;
+}
+
+textarea {
+	overflow: auto;
+	resize: none;
+	width: 18em;
+	height: 4em;
+	border: 1px solid var(--brand-color);
+	line-height: 1.5em;
+}
+
+.big-textarea {
+	height: 10em;
+}
+
+input[type=tel],
+input[type=email],
+input[type=url] {
+	width: 11.5em;
+	margin-right: 1em;
+}
+
+.contact-info-table {
+	border-top: 1px solid var(--color-grey);
+	margin-top: .5em;
+	line-height: 1.5em;
+	padding: .7em 0 .7em 0;
+}
+
+.avatar-name-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.avatar-name {
+	display: flex;
+	flex-direction: row;
+	width: 12em;
+	justify-content: space-between;
+	font-size: larger;
+	align-items: center;
+}
+
+.lost-form-topblock {
+	display: flex;
+	flex-direction: row;
+
+}
+
+.lost-form-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.drag-photo-block-button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-text);
+}
+.drag-photo-block-button p{
+text-align: center;
+}
+.short-button{
+	color: var(--brand-color);
+	width: 6em;
+	padding: 0 1.2em;
+	line-height: 2.5em;
+}
+.field-drop{
+	width: 12em;
+	height: 11em;
+	border: 1px solid var(--brand-color);
+}
+.drag-photo-block{
+	width: 24em;
+	height: 15em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 1px solid var(--color-grey);
+	margin-top: 2em;
 }

@@ -453,14 +453,14 @@ input {
 
 }
 
-#cancel-button {
+.white-button {
 	color: var(--brand-color);
 	width: 8em;
 	padding: 0 2.25em;
 	line-height: 2.5em;
 }
 
-#submit-button {
+.button-brand {
 	background-color: var(--brand-color);
 	color: var(--color-text-inverted);
 	width: 12em;
@@ -474,7 +474,7 @@ input {
 	padding: 0 .5em;
 }
 
-.submit-button-name {
+.button-brand-name {
 	padding-left: 2em;
 }
 
